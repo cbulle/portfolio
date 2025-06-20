@@ -78,17 +78,35 @@
     .comp{
       padding: 2rem 1rem ;
     }
+   .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
     .card {
-      background: white;
-      border-radius: 1rem;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      padding: 1.5rem;
-      margin-bottom: 10px ;
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 16px;
+      box-sizing: border-box;
     }
+
     .card h3 {
+      margin-top: 0;
       color: #00ced1;
-      margin-bottom: 0.5rem;
+      margin-bottom: 10px;
     }
+
+    .card p {
+      color: #555;
+      margin-bottom: 15px;
+    }
+    
+    
     #contact a{
       color: #00ced1;
     }
@@ -99,3 +117,8 @@
       padding: 1rem;
       margin-top: 4rem;
     }
+    @media screen and (max-width: 640px) {
+    .card {
+      width: 100%;
+    }
+  }
